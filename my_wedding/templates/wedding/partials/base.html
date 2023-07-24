@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'wedding/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'wedding/css/my_styles.css' %}">
+</head>
+<body>
+<!-- debut header-->
+{% include 'wedding/partials/header.html'%}
+<!--header fin-->
+
+<!--carousel et card-->
+{% block content %}
+
+{% endblock %}
+
+<!--location page-->
+{% block location %}
+
+{% endblock %}
+
+
+
+
+
+
+
+
+<script src="{% static 'wedding/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>

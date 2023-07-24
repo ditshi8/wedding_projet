@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="{% static 'wedding/css/bootstrap.min.css' %}">
-</head>
-<body>
+
 <div class="container">
     <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
       <div class="col-md-3 mb-2 mb-md-0">
@@ -16,11 +8,11 @@
       </div>
 
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
-        <li><a href="#" class="nav-link px-2">Features</a></li>
-        <li><a href="#" class="nav-link px-2">Pricing</a></li>
-        <li><a href="#" class="nav-link px-2">FAQs</a></li>
-        <li><a href="#" class="nav-link px-2">About</a></li>
+        <li><a href="/" class="nav-link px-2 link-secondary">Home</a></li>
+        <li><a href="{% url 'vente' %}" class="nav-link px-2">Vente</a></li>
+        <li><a href="{% url 'location' %}" class="nav-link px-2">Location</a></li>
+        <li><a href="{% url 'meeting' %}" class="nav-link px-2">Meeting</a></li>
+        <li><a href="{% url 'contact' %}" class="nav-link px-2">Contact</a></li>
       </ul>
 
       <div class="col-md-3 text-end">
@@ -29,7 +21,3 @@
       </div>
     </header>
   </div>
-<h1>{{name}}</h1>
-<script src="{% static 'wedding/js/bootstrap.bundle.min.js' %}"></script>
-</body>
-</html>
