@@ -51,7 +51,7 @@
   {% for art in article %}
   <div class="col">
     <div class="card" style="width: 18rem;">
-  <img src="{% static 'images/robe3.jpg' %}" class="card-img-top" alt="...">
+  <img src="{{ art.images.url }}" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">{{art.title}}</h5>
     <p class="card-text">{{art.description}}</p>

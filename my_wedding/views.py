@@ -15,14 +15,11 @@ def homeView(request, template_name="wedding/pages/index.html"):
     context['name'] = bonjour
 
     # instance de l'article
-    a1 = Article("Robes bustiers", "Robes bustiers description" )
-    a2 = Article("Robes singets", "description" )
-    a3 = Article("Robes dentellées", "description" )
-    a4 = Article("voilles", "description" )
-    list_article = [a1, a2, a3, a4]
+    #SELECT * FROM ARTICLE , with SQL
+    # With ORM
+    list_article = Article.objects.all()
     #for art in list_article:
         #print(art.title)
-    print(a1.title)
     context['article'] = list_article
 
 
