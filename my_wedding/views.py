@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Article
+from .models import Contact
 
 # Create your views here.
 
@@ -35,4 +36,24 @@ def meetingView(request, template_name="wedding/pages/meeting.html"):
     return render(request,template_name)
 
 def contactView(request, template_name="wedding/pages/contact.html"):
+    print("je veux voir request", request)
+    # verification de la methode de la requele == POST
+    if request.method == "POST":
+        #Recuperation des valeur entrées par l'utilisateur
+        name = request.POST['name']
+        email = request.POST['email']
+        content = request.POST['content']
+
+
+
+        # creation de notre objet Contact
+        obj_contact = Contact(
+            name = name,
+            email = email,
+            content = content
+        )
+
+        obj_contact.save()
+
+
     return render(request, template_name)

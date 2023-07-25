@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    {% block title %} <title>Home</title> {% endblock %}
     <link rel="stylesheet" href="{% static 'wedding/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'wedding/css/my_styles.css' %}">
 </head>
@@ -22,7 +22,10 @@
 
 {% endblock %}
 
+<!--contact page-->
+{% block contact %}
 
+{% endblock %}
 
 
 

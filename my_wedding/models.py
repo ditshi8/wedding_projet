@@ -14,5 +14,14 @@ class Article(models.Model):
     publication = models.BooleanField()
 
     def __str__(self):
-        return self.title
+     return self.title
+
+class Contact(models.Model):
+    name = models.CharField(max_length=30)
+    email = models.EmailField(unique=True)
+    content = models.TextField()
+
+    #cette fonction permet à retourner nos informations inserées
+    def __str__(self):
+        return f'{self.name} {self.email}'
 
